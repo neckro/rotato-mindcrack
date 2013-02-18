@@ -7,7 +7,7 @@ modpack launcher.
 
 - Windows users: Double-click `mindcrack.bat`.
 - Mac users: Double-click `mindcrack.command` or run `mindcrack.sh` in Terminal.
-- Linux users: Coming soon.
+- Linux users: Run `mindcrack.sh`.
 
 The script grabs three file lists:
 

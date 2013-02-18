@@ -8,8 +8,11 @@ if test "$uname" = "Windows_NT"; then
 elif test "$uname" = "Darwin"; then
 	# Mac
 	FTB_CFG="$HOME/Library/Application Support/ftblauncher/ftblaunch.cfg"
+elif test "$unmame" = "Linux"; then
+	# Linux
+	FTB_CFG="$HOME/.ftblauncher/ftbconfig.cfg"
 else
-	echo "Windows or Mac only, buddy." && exit
+	echo "I don't know what the hell OS you're using." && exit
 fi
 # this is such a hack but it works
 MC_BASE=$( sed -n 's/^installPath=\(.*\)$/\1/p' "$FTB_CFG" | sed 's/\\\([^\\]\)/\1/g' )
