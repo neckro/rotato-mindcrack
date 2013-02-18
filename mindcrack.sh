@@ -8,9 +8,9 @@ if test "$uname" = "Windows_NT"; then
 elif test "$uname" = "Darwin"; then
 	# Mac
 	FTB_CFG="$HOME/Library/Application Support/ftblauncher/ftblaunch.cfg"
-elif test "$unmame" = "Linux"; then
+elif test "$uname" = "Linux"; then
 	# Linux
-	FTB_CFG="$HOME/.ftblauncher/ftbconfig.cfg"
+	FTB_CFG="$HOME/.ftblauncher/ftblaunch.cfg"
 else
 	echo "I don't know what the hell OS you're using." && exit
 fi
@@ -48,8 +48,8 @@ function get_file() {
 
 REMOVE_LIST=$( get_list mods_deprecated.txt )
 for FILE in $REMOVE_LIST; do rm -f "$MC_MODS/$FILE" 2>/dev/null; done
-get_list mods_forge.txt | process_list "$MC_JARS"
-get_list mods_jar.txt   | process_list "$MC_MODS"
+get_list mods_forge.txt | process_list "$MC_MODS"
+get_list mods_jar.txt   | process_list "$MC_JARS"
 echo "$REPO/Recipes.cfg" | process_list "$MC_BASE/MindCrack/minecraft/config/GregTech"
 
 echo "All done! Press a key." && read
