@@ -1,1 +1,1 @@
-.\util\bash.exe mindcrack.sh
+.\bin\bash.exe mindcrack.sh

@@ -1,6 +1,6 @@
 #!/bin/bash
 REPO="http://www.boylecraft.net/mindcrack"
-export PATH=./util:$PATH
+export PATH=./bin:$PATH
 uname=$( uname )
 if test "$uname" = "Windows_NT"; then
 	# Windows
